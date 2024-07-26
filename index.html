@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="icon" href="logo.png" type="image/PNG">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 custom-font">
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+            </div>
+            <div class="input-section">
+                <label for="texto" class="text-xl text-gray-700 block mb-4">Ingrese el texto aquí</label>
+                <textarea id="texto" class="textarea" placeholder="Escribe aquí..."></textarea>
+            </div>
+            <div class="info flex items-center mb-8 text-gray-500 text-sm">
+                <i class="fas fa-info-circle mr-2"></i>
+                <span class="icon-text">
+                    <img src="signo.png" alt="" class="icon-img">
+                    <span class="text">Solo letras minúsculas y sin acentos</span>
+                </span>
+            </div>
+            <div class="buttons">
+                <button id="encrypt-btn" class="btn-encrypt">Encriptar</button>
+                <button id="decrypt-btn" class="btn-decrypt">Desencriptar</button>
+            </div>
+        </div>
+        <div class="right-section"> 
+            <img id="illustration-img" src="Muñeco.png" alt="Muñeco" class="illustration">
+            <h3 id="message-title" class="message-title">Ningún mensaje fue encontrado</h3>
+            <div id="message-container" class="hidden">
+                <p id="message-text" class="message-text">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="copy-btn" class="hidden">Copiar Mensaje</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
+            <div class="footer_copyright">
+                <span>
+                 </script>  Este Challenger ha sido desarrollado por 
+                    <a href="https://www.instagram.com/alvaro_8713/" target="_blank" class="footer-link">Alvaro Aular</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

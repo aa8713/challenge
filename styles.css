@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3F4F6;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.custom-font {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #F6F8FB;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: row; /* Cambia la dirección del diseño a horizontal */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem; /* Agrega un margen inferior para evitar que el contenido tape el footer */
+}
+
+.left-section {
+    width: 65%;
+    padding-right: 2rem;
+}
+
+.logo {
+    margin-bottom: 3rem;
+}
+
+.input-section {
+    margin-bottom: 3rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-gray-700 {
+    color: #374151;
+}
+
+.textarea {
+    width: 100%;
+    height: 12rem;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 0.75rem 0;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-encrypt {
+    background-color: #1D4ED8;
+    color: white;
+    border: none;
+}
+
+.btn-encrypt:hover {
+    background-color: #1A45C6;
+}
+
+.btn-decrypt {
+    background-color: white;
+    border: 1px solid #1D4ED8;
+    color: #1D4ED8;
+}
+
+.btn-decrypt:hover {
+    background-color: #E5E7EB;
+}
+
+.right-section {
+    width: 400px;
+    background-color: white;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    position: relative;
+}
+
+#message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.illustration {
+    width: 336px;
+    height: 304px;
+    transition: opacity 0.3s;
+}
+
+.message-title {
+    font-size: 1.125rem;
+    color: #374151;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.message-text {
+    color: #6B7280;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#copy-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    background-color: #1D4ED8;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+#copy-btn:hover {
+    background-color: #1A45C6;
+}
+
+.footer {
+    background-color: #F3F4F6; /* Color de fondo */
+    color: hsl(0, 0%, 0%); /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    border-radius: 0.75rem; /* Redondear las esquinas */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra superior */
+    width: 80%; /* Asegura que el footer ocupe todo el ancho */
+    margin-top: auto; /* Asegura que el footer esté al final de la página */
+    position: absolute; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Asegura que el footer esté en la parte inferior */
+}
+
+/* Enlace del pie de página */
+.footer-link {
+    color: hsl(249, 100%, 50%); /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+/* Consultas de medios para diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Oculta la ilustración en tabletas */
+    .illustration {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-xl {
+        font-size: 1rem;
+    }
+
+    .textarea {
+        height: 10rem;
+        font-size: 0.875rem;
+    }
+
+    .illustration {
+        width: 100%;
+        height: auto;
+    }
+
+    #copy-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .footer {
+        width: 100%;
+        margin-top: 2rem;
+        position: relative; /* Cambia la posición a relativa para móviles */
+        bottom: auto; /* Elimina la posición fija del fondo */
+    }
+}
